@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button,
+        input {
+            margin: 4px;
+            padding: 4px;
+            border-radius: 5px;
+        }
+    
+        #ketqua {
+            padding: 4px;
+            font-size: 2em;
+    
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="so1"><input type="number" id="so2"><br>
+    <button type="button" onclick="suLyPhepTinh('+');">Addition(+)</button>
+    <button type="button" onclick="suLyPhepTinh('-');">Subtraction(-)</button>
+    <button type="button" onclick="suLyPhepTinh('*');">multiplication(X)</button>
+    <button type="button" onclick="suLyPhepTinh('/');">Division(/)</button>
+    <div id="ketqua"></div>
+
+    <script>
+        function suLyPhepTinh (pheptoan){
+            let so_1 = document.getElementById('so1').value;
+            let so_2 = document.getElementById('so2').value;
+            let result = 0;
+            
+            if (so_1 !== 0 & so_2 !== 0){
+                
+                if (pheptoan == '+'){
+                    result = parseFloat(so_1) + parseFloat(so_2);
+                    document.getElementById('ketqua').innerHTML = "Số " + so_1 + " " + pheptoan + " Số " + so_2 + " = " + result;
+                }else if (pheptoan == '-'){
+                    result = parseFloat(so_1) - parseFloat(so_2);
+                    document.getElementById('ketqua').innerHTML = "Số " + so_1 + " " + pheptoan + " Số " + so_2 + " = " + result;
+                } else if (pheptoan == '*') {
+                    result = parseFloat(so_1) * parseFloat(so_2);
+                    document.getElementById('ketqua').innerHTML = "Số " + so_1 + " " + pheptoan + " Số " + so_2 + " = " + result;
+                } else if (pheptoan == '/') {
+                    result = parseFloat(so_1) / parseFloat(so_2);
+                    document.getElementById('ketqua').innerHTML = "Số " + so_1 + " " + pheptoan + " Số " + so_2 + " = " + result;
+                }
+            }else {
+                document.getElementById('ketqua').innerHTML = "Làm ơn nhập lại";
+            }
+        }
+    </script>
+</body>
+</html>

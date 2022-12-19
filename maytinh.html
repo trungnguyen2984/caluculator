@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button, input{
+            margin:4px;
+            padding:4px;
+            border-radius:5px;
+        }
+        #ketqua{
+            padding:4px;
+            font-size:2em;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="number" id="so1"><input type="number" id="so2"><br>
+    <button type="button" onclick="addition();">Addition(+)</button>
+    <button type="button" onclick="subtraction();">Subtraction(-)</button>
+    <button type="button" onclick="multiplication();">multiplication(X)</button>
+    <button type="button" onclick="division();">Division(/)</button>
+    <div id="ketqua"></div>
+    <script>
+        function addition(){
+            let so1 = parseInt(document.getElementById('so1').value);
+            let so2 = parseInt(document.getElementById('so2').value);
+            if (so1.value !== '' && so2.value !==''){
+                let ketqua = so1 + so2;
+                document.getElementById('ketqua').innerHTML = ketqua;
+            }
+            
+        }
+        function substraction() {
+                let so1 = parseInt(document.getElementById('so1').value);
+                let so2 = parseInt(document.getElementById('so2').value);
+            if (so1.value !== '' && so2.value !== '') {
+                let ketqua = so1 - so2;
+                document.getElementById('ketqua').innerHTML = ketqua;
+            }
+
+            }
+        function multiplication() {
+                let so1 = parseInt(document.getElementById('so1').value);
+                let so2 = parseInt(document.getElementById('so2').value);
+            if (so1.value !== '' && so2.value !== '') {
+                let ketqua = so1 * so2;
+                document.getElementById('ketqua').innerHTML = ketqua;
+            }
+
+            }
+        function divition() {
+                let so1 = parseInt(document.getElementById('so1').value);
+                let so2 = parseInt(document.getElementById('so2').value);
+
+                if (so1.value !== '' && so2.value !== '' && so2 !== 0) {
+                let ketqua = so1 / so2;
+                document.getElementById('ketqua').innerHTML = ketqua;
+            }
+
+            }
+        
+    </script>
+</body>
+</html>
